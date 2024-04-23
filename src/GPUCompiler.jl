@@ -60,8 +60,9 @@ function __init__()
     dir = joinpath(dir, "v$(VERSION.major).$(VERSION.minor)")
     if VERSION > v"1.9"
         ## also add the package version
-        pkgver = Base.pkgversion(GPUCompiler)
-        dir = joinpath(dir, "v$(pkgver.major).$(pkgver.minor)")
+        #pkgver = Base.pkgversion(GPUCompiler)
+        #dir = joinpath(dir, "v$(pkgver.major).$(pkgver.minor)")
+        dir = joinpath(dir, "v0.26.4")
     end
     mkpath(dir)
     global compile_cache = dir
